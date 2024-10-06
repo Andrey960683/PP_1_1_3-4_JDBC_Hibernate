@@ -19,11 +19,14 @@ public class Main {
         System.out.println("User с именем — name2 добавлен в базу данных");
         userService.saveUser("name3", "lastName3", (byte) 21);
         System.out.println("User с именем — name3 добавлен в базу данных");
+        userService.removeUserById(2);
+        System.out.println("-------");
         List<User> allUsers = userService.getAllUsers();
         for (User user : allUsers) {
             System.out.println(user);
         }
         userService.cleanUsersTable();
         userService.dropUsersTable();
+
     }
 }
